@@ -34,6 +34,7 @@ def test_contact_us(browser):
         "alert-success")
     assert success_banner
 
+
 def test_missing_message_contact_us(browser):
     contact_page = RodneyCodesContact(browser)
     NAME = "Rodney Test Automation"
@@ -53,6 +54,7 @@ def test_missing_message_contact_us(browser):
     success_banner = contact_page.browser.find_element_by_class_name(
         "alert-success")
     assert success_banner
+
 
 def test_error_missing_name_contact_us(browser):
     contact_page = RodneyCodesContact(browser)
@@ -74,6 +76,7 @@ def test_error_missing_name_contact_us(browser):
         "text-danger")
     assert error_text
 
+
 def test_error_missing_email_contact_us(browser):
     contact_page = RodneyCodesContact(browser)
     NAME = "Rodney Test Automation"
@@ -93,6 +96,7 @@ def test_error_missing_email_contact_us(browser):
     error_text = contact_page.browser.find_element_by_class_name(
         "text-danger")
     assert error_text
+
 
 def test_error_missing_phone_contact_us(browser):
     contact_page = RodneyCodesContact(browser)
